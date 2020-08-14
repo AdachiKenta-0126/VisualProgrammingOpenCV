@@ -6,14 +6,27 @@
 //  Copyright © 2020 AIT. All rights reserved.
 //
 
+import Foundation
 import Cocoa
+import opencv2
+
+class main{
+    var file_name:String?
+    var isGrayscale:Bool?
+    var output_img_type:String?
+    var input_img_type:String?
+    
+    var ddepth:Int?
+    var is_ddepth_active:Bool?
+}
 
 class ViewController: NSViewController {
 
     @IBOutlet weak var OutPutImg: NSImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let image = NSImage(named: "Lenna_(test_image).png")
+        OutPutImg.image = self.convertColor(source: image!)
         // Do any additional setup after loading the view.
     }
 
@@ -35,10 +48,17 @@ class ViewController: NSViewController {
                 //log.info(url.absoluteString)
                 // ここでファイルを読み込む
                 self.OutPutImg.image = NSImage(contentsOf: dialog.url!)
+                
+                let ChangeNSImage = self.OutPutImg.image!
+                self.OutPutImg.image = self.convertColor(source: ChangeNSImage)
             }
         }
+        
     }
-    
+    func convertColor(source srcImage: NSImage) -> NSImage {
+        let dstImage = OpenCVWrapper.hack(srcImage)
+        return dstImage as! NSImage
+    }
 
 }
 
