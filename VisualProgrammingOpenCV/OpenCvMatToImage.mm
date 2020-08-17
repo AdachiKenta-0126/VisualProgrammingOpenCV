@@ -81,19 +81,21 @@ static NSImage *MatToNSImage(cv::Mat &mat) {
 
 @implementation OpenCVWrapper
 
-+ hack:(NSImage *)image {
++ hack:(NSImage *)image{
     
     cv::Mat src;
     NSImageToMat(image, src);
-    
+    cv::Mat tmp_image;
     cv::Mat gray;
     cv::cvtColor(src, gray, cv::COLOR_BGR2GRAY);
     
-    cv::Mat twocolor;
-    cv::threshold(gray,twocolor, 100, 255,cv::THRESH_BINARY);
+//    cv::Mat twocolor;
+//    cv::threshold(gray,twocolor, 100, 255,cv::THRESH_BINARY);
     
     cv::Mat sobel;
-    cv::Sobel(twocolor, sobel, CV_8U, 1, 1, 1, 5);
+    
+    cv::Sobel(gray, tmp_image, CV_8U, 0, 1, 3);
+    cv::convertScaleAbs(tmp_image, sobel);
    
     return MatToNSImage(sobel);
 }
