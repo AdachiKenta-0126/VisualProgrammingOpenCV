@@ -180,7 +180,6 @@
 		5F5D9E4524E39BFE00365362 /* VisualProgrammingOpenCVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualProgrammingOpenCVUITests.swift; sourceTree = "<group>"; };
 		5F5D9E4724E39BFE00365362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F5D9E6524E3F7FE00365362 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		5F5D9E6824E4136200365362 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		5F9650E124F4BD330013C956 /* NOimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NOimage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -395,7 +394,6 @@
 				5F4558B724E51EB8005A28AF /* AppKit.framework */,
 				5F4558B524E51EAF005A28AF /* Accelerate.framework */,
 				5F5D9E6524E3F7FE00365362 /* libc++.tbd */,
-				5F5D9E6824E4136200365362 /* opencv2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
