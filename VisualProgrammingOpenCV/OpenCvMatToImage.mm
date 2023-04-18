@@ -81,23 +81,79 @@ static NSImage *MatToNSImage(cv::Mat &mat) {
 
 @implementation OpenCVWrapper
 
-+ hack:(NSImage *)image{
++ grayInputImage:(NSImage *)image myArgument2:(NSString *)code{
     
     cv::Mat src;
     NSImageToMat(image, src);
-    cv::Mat tmp_image;
-    cv::Mat gray;
-    cv::cvtColor(src, gray, cv::COLOR_BGR2GRAY);
+    cv::Mat dst;
     
+    if([code isEqualToString:@"RGB"]){
+        return MatToNSImage(src);
+    }else if([code isEqualToString:@"RGB2GRAY"]){
+        cv::cvtColor(src, dst, cv::COLOR_BGR2GRAY);
+        //GRAY2BGR
+    }else{
+        cv::cvtColor(src, dst, cv::COLOR_RGB2HSV);
+    }
+
+    
+    //madadayo
 //    cv::Mat twocolor;
 //    cv::threshold(gray,twocolor, 100, 255,cv::THRESH_BINARY);
     
-    cv::Mat sobel;
-    
-    cv::Sobel(gray, tmp_image, CV_8U, 0, 1, 3);
-    cv::convertScaleAbs(tmp_image, sobel);
+    //kokodeyo
+//    cv::Mat sobel;
+//
+//    cv::Sobel(gray, tmp_image, CV_8U, 0, 1, 3);
+//    cv::convertScaleAbs(tmp_image, sobel);
    
-    return MatToNSImage(sobel);
+    return MatToNSImage(dst);
 }
+
++ twoColorImage:(NSImage *)image myArgument2:(NSNumber *)Th{
+    
+    cv::Mat src;
+    cv::Mat dst;
+    double TH = [Th doubleValue];
+    NSImageToMat(image, src);
+    cv::threshold(src,dst,TH,255,cv::THRESH_BINARY);
+    
+    return MatToNSImage(dst);
+}
+
++ dilate:(NSImage *)image myArgument2:(NSNumber *)count{
+    
+    cv::Mat src;
+    cv::Mat dst;
+    cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
+    int Count = [count doubleValue];
+    NSImageToMat(image, src);
+    cv::dilate(src, dst, kernel,cv::Point(-1,-1),Count);
+    
+    return MatToNSImage(dst);
+}
++ erode:(NSImage *)image myArgument2:(NSNumber *)count{
+    
+    cv::Mat src;
+    cv::Mat dst;
+    cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
+    int Count = [count doubleValue];
+    NSImageToMat(image, src);
+    cv::erode(src, dst, kernel,cv::Point(-1,-1),Count);
+    
+    return MatToNSImage(dst);
+}
+
++ sobel:(NSImage *)image myArgument2:(NSNumber *)count{
+    
+    cv::Mat src;
+    cv::Mat dst;
+    NSImageToMat(image, src);
+    cv::Mat sobel;
+    int Count = [count doubleValue];
+    cv::Sobel(src, dst, CV_8U, 0, 1, Count);
+    return MatToNSImage(dst);
+}
+
 
 @end

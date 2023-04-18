@@ -13,7 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OpenCVWrapper : NSObject
 
-+ hack:(NSImage *)image;
++ grayInputImage:(NSImage *)image myArgument2:(NSString *)code;
++ twoColorImage:(NSImage *)image myArgument2:(NSNumber *)Th;
++ dilate:(NSImage *)image myArgument2:(NSNumber *)count;
++ erode:(NSImage *)image myArgument2:(NSNumber *)count;
++ sobel:(NSImage *)image myArgument2:(NSNumber *)count;
 
 @end
 
