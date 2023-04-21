@@ -147,7 +147,7 @@ class ViewController: NSViewController {
         for Value in 0...FlowArray.count - 1 {
             outside: switch FlowArray[Value] as! Int{
                 case 0:
-                    dstImage = OpenCVWrapper.grayInputImage(srcImage,myArgument2: SelectColorComboBox.stringValue) as! NSImage
+                dstImage = OpenCVWrapper.grayInputImage(srcImage,myArgument: SelectColorComboBox.stringValue) as! NSImage
                     break outside
                 case 1:
                     
@@ -156,7 +156,7 @@ class ViewController: NSViewController {
                     
                     break outside
                 case 3:
-                dstImage = OpenCVWrapper.sobel(dstImage,myArgument2: NSNumber(value: ksizeCount.integerValue)) as! NSImage
+                dstImage = OpenCVWrapper.sobel(dstImage,myArgument: NSNumber(value: ksizeCount.integerValue)) as! NSImage
                     break outside
                 case 4:
                     
@@ -165,13 +165,13 @@ class ViewController: NSViewController {
                     
                     break outside
                 case 6:
-                    dstImage = OpenCVWrapper.twoColorImage(dstImage ,myArgument2: NSNumber(value: ThSlider.integerValue)) as! NSImage
+                dstImage = OpenCVWrapper.twoColorImage(dstImage ,myArgument: NSNumber(value: ThSlider.integerValue)) as! NSImage
                     break outside
                 case 7:
-                    dstImage = OpenCVWrapper.dilate(dstImage ,myArgument2: NSNumber(value: dilateCount.integerValue)) as! NSImage
+                dstImage = OpenCVWrapper.dilate(dstImage ,myArgument: NSNumber(value: dilateCount.integerValue)) as! NSImage
                     break outside
                 case 8:
-                    dstImage = OpenCVWrapper.erode(dstImage ,myArgument2: NSNumber(value: erodeCount.integerValue)) as! NSImage
+                dstImage = OpenCVWrapper.erode(dstImage ,myArgument: NSNumber(value: erodeCount.integerValue)) as! NSImage
                     break outside
                 default: break outside
             }
@@ -181,8 +181,9 @@ class ViewController: NSViewController {
     }
 
     @IBAction func OpenOrCloseButton1(_ sender: NSButton) {
+        print(SmoothingButton.frameCenterRotation)
         if(SmoothingButton.frameCenterRotation == 0){
-        SmoothingButton.frameCenterRotation = SmoothingButton.frameCenterRotation + 270
+        SmoothingButton.frameCenterRotation = SmoothingButton.frameCenterRotation - 90
             
             blurFirterLabel.isHidden = false
             GaussianBlurFirterLabel.isHidden = false
@@ -192,7 +193,7 @@ class ViewController: NSViewController {
             
             
         }else{
-            SmoothingButton.frameCenterRotation = SmoothingButton.frameCenterRotation - 270
+            SmoothingButton.frameCenterRotation = SmoothingButton.frameCenterRotation + 90
             
             blurFirterLabel.isHidden = true
             GaussianBlurFirterLabel.isHidden = true
@@ -204,17 +205,15 @@ class ViewController: NSViewController {
     
     @IBAction func OpenOrCloseButton2(_ sender: NSButton) {
         if(EdgeButton.frameCenterRotation == 0){
-            EdgeButton.frameCenterRotation = EdgeButton.frameCenterRotation + 270
-            
+            EdgeButton.frameCenterRotation = EdgeButton.frameCenterRotation - 90
             SobelFirterLabel.isHidden = false
             PrewittFilterLabel.isHidden = false
             LaplacianFilterLabel.isHidden = false
             
             binaryView.frame.origin.y = binaryView.frame.origin.y - 78
             
-            
         }else{
-            EdgeButton.frameCenterRotation = EdgeButton.frameCenterRotation - 270
+            EdgeButton.frameCenterRotation = EdgeButton.frameCenterRotation + 90
             
             SobelFirterLabel.isHidden = true
             PrewittFilterLabel.isHidden = true
@@ -226,19 +225,18 @@ class ViewController: NSViewController {
     
     @IBAction func OpenOrCloseButton3(_ sender: NSButton) {
         if(BinaryButton.frameCenterRotation == 0){
-            BinaryButton.frameCenterRotation = BinaryButton.frameCenterRotation + 270
+            BinaryButton.frameCenterRotation = BinaryButton.frameCenterRotation - 90
             
             PercentileMethodFilterLable.isHidden = false
             DilationFilterLabel.isHidden = false
             ErosionFilterLabel.isHidden = false
             
         }else{
-            BinaryButton.frameCenterRotation = BinaryButton.frameCenterRotation - 270
+            BinaryButton.frameCenterRotation = BinaryButton.frameCenterRotation + 90
             
             PercentileMethodFilterLable.isHidden = true
             DilationFilterLabel.isHidden = true
             ErosionFilterLabel.isHidden = true
-
         }
     }
 
@@ -473,35 +471,6 @@ class ViewController: NSViewController {
             setCurrentColor(addField: LabelCheck)
             if LabelCheck != SetImageButton{
                 CurrentLabelTag = LabelCheck.tag
-            }else{
-                CurrentLabelTag = 0
-            }
-            switch  LabelCheck.tag{
-                case 1:
-                    
-                    break
-                case 2:
-                    
-                    break
-                case 3:
-                    
-                    break
-                case 4:
-                    
-                    break
-                case 5:
-                    
-                    break
-                case 6:
-                    
-                    break
-                case 7:
-                    
-                    break
-                case 8:
-                    
-                    break
-                default: break
             }
         }
     }

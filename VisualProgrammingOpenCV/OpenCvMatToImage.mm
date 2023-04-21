@@ -81,7 +81,7 @@ static NSImage *MatToNSImage(cv::Mat &mat) {
 
 @implementation OpenCVWrapper
 
-+ grayInputImage:(NSImage *)image myArgument2:(NSString *)code{
++ grayInputImage:(NSImage *)image myArgument:(NSString *)code{
     
     cv::Mat src;
     NSImageToMat(image, src);
@@ -95,22 +95,11 @@ static NSImage *MatToNSImage(cv::Mat &mat) {
     }else{
         cv::cvtColor(src, dst, cv::COLOR_RGB2HSV);
     }
-
-    
-    //madadayo
-//    cv::Mat twocolor;
-//    cv::threshold(gray,twocolor, 100, 255,cv::THRESH_BINARY);
-    
-    //kokodeyo
-//    cv::Mat sobel;
-//
-//    cv::Sobel(gray, tmp_image, CV_8U, 0, 1, 3);
-//    cv::convertScaleAbs(tmp_image, sobel);
    
     return MatToNSImage(dst);
 }
 
-+ twoColorImage:(NSImage *)image myArgument2:(NSNumber *)Th{
++ twoColorImage:(NSImage *)image myArgument:(NSNumber *)Th{
     
     cv::Mat src;
     cv::Mat dst;
@@ -121,7 +110,7 @@ static NSImage *MatToNSImage(cv::Mat &mat) {
     return MatToNSImage(dst);
 }
 
-+ dilate:(NSImage *)image myArgument2:(NSNumber *)count{
++ dilate:(NSImage *)image myArgument:(NSNumber *)count{
     
     cv::Mat src;
     cv::Mat dst;
@@ -132,7 +121,7 @@ static NSImage *MatToNSImage(cv::Mat &mat) {
     
     return MatToNSImage(dst);
 }
-+ erode:(NSImage *)image myArgument2:(NSNumber *)count{
++ erode:(NSImage *)image myArgument:(NSNumber *)count{
     
     cv::Mat src;
     cv::Mat dst;
@@ -144,7 +133,7 @@ static NSImage *MatToNSImage(cv::Mat &mat) {
     return MatToNSImage(dst);
 }
 
-+ sobel:(NSImage *)image myArgument2:(NSNumber *)count{
++ sobel:(NSImage *)image myArgument:(NSNumber *)count{
     
     cv::Mat src;
     cv::Mat dst;
