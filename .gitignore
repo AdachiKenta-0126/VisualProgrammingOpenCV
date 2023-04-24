@@ -2,3 +2,4 @@ opencv2.framework/
 VisualProgrammingOpenCVTests
 VisualProgrammingOpenCVUITests
 libopenjp2.a
+find . -size +100M | sed -e 's/^\.\///' >> .gitignore
