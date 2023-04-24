@@ -272,6 +272,7 @@ class ViewController: NSViewController {
         }
         sender.isEnabled = false
     }
+    
     //デリートキーが押された時
     override func keyUp(with event: NSEvent) {
         if event.keyCode == 51{
