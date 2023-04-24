@@ -149,12 +149,6 @@
 		355281EC29EEF6F100F86400 /* libopencv_dnn.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_dnn.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_dnn.4.7.0.dylib; sourceTree = "<group>"; };
 		355281ED29EEF6F100F86400 /* libopencv_structured_light.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_structured_light.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_structured_light.4.7.0.dylib; sourceTree = "<group>"; };
 		3552826D29F6EDC500F86400 /* libopencv_xobjdetect.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_xobjdetect.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_xobjdetect.4.7.0.dylib; sourceTree = "<group>"; };
-		5F4558B524E51EAF005A28AF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		5F4558B724E51EB8005A28AF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		5F4558B924E51EC0005A28AF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		5F4558BB24E51EC7005A28AF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		5F4558BD24E51ED1005A28AF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		5F4558BF24E51ED8005A28AF /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
 		5F4558CC24E6BD47005A28AF /* OpenCvMatToImage.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCvMatToImage.mm; sourceTree = "<group>"; };
 		5F4558CE24E6BD78005A28AF /* OpenCvMatToImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = OpenCvMatToImage.h; sourceTree = "<group>"; };
 		5F4558CF24E6C487005A28AF /* Lenna_(test_image).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lenna_(test_image).png"; sourceTree = "<group>"; };
@@ -172,7 +166,6 @@
 		5F5D9E4124E39BFE00365362 /* VisualProgrammingOpenCVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisualProgrammingOpenCVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5D9E4524E39BFE00365362 /* VisualProgrammingOpenCVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualProgrammingOpenCVUITests.swift; sourceTree = "<group>"; };
 		5F5D9E4724E39BFE00365362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F5D9E6524E3F7FE00365362 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5F9650E124F4BD330013C956 /* NOimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NOimage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -373,13 +366,6 @@
 				355281BA29EEF6F000F86400 /* libopencv_xfeatures2d.4.7.0.dylib */,
 				355281CE29EEF6F000F86400 /* libopencv_ximgproc.4.7.0.dylib */,
 				355281C029EEF6F000F86400 /* libopencv_xphoto.4.7.0.dylib */,
-				5F4558BF24E51ED8005A28AF /* OpenCL.framework */,
-				5F4558BD24E51ED1005A28AF /* CoreVideo.framework */,
-				5F4558BB24E51EC7005A28AF /* CoreMedia.framework */,
-				5F4558B924E51EC0005A28AF /* AVFoundation.framework */,
-				5F4558B724E51EB8005A28AF /* AppKit.framework */,
-				5F4558B524E51EAF005A28AF /* Accelerate.framework */,
-				5F5D9E6524E3F7FE00365362 /* libc++.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
