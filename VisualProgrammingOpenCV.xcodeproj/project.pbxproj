@@ -61,7 +61,6 @@
 		3552825A29F277E500F86400 /* libopencv_wechat_qrcode.4.7.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 355281E229EEF6F100F86400 /* libopencv_wechat_qrcode.4.7.0.dylib */; };
 		3552825B29F277E500F86400 /* libopencv_xfeatures2d.4.7.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 355281BA29EEF6F000F86400 /* libopencv_xfeatures2d.4.7.0.dylib */; };
 		3552825C29F277E500F86400 /* libopencv_ximgproc.4.7.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 355281CE29EEF6F000F86400 /* libopencv_ximgproc.4.7.0.dylib */; };
-		3552825D29F277E500F86400 /* libopencv_xobjdetect.4.7.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 355281BB29EEF6F000F86400 /* libopencv_xobjdetect.4.7.0.dylib */; };
 		3552825E29F277E500F86400 /* libopencv_xphoto.4.7.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 355281C029EEF6F000F86400 /* libopencv_xphoto.4.7.0.dylib */; };
 		5F4558CD24E6BD47005A28AF /* OpenCvMatToImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F4558CC24E6BD47005A28AF /* OpenCvMatToImage.mm */; };
 		5F4558D024E6C487005A28AF /* Lenna_(test_image).png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4558CF24E6C487005A28AF /* Lenna_(test_image).png */; };
@@ -98,7 +97,6 @@
 		355281B829EEF6F000F86400 /* libopencv_superres.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_superres.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_superres.4.7.0.dylib; sourceTree = "<group>"; };
 		355281B929EEF6F000F86400 /* libopencv_stereo.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_stereo.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_stereo.4.7.0.dylib; sourceTree = "<group>"; };
 		355281BA29EEF6F000F86400 /* libopencv_xfeatures2d.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_xfeatures2d.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_xfeatures2d.4.7.0.dylib; sourceTree = "<group>"; };
-		355281BB29EEF6F000F86400 /* libopencv_xobjdetect.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_xobjdetect.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_xobjdetect.4.7.0.dylib; sourceTree = "<group>"; };
 		355281BC29EEF6F000F86400 /* libopencv_datasets.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_datasets.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_datasets.4.7.0.dylib; sourceTree = "<group>"; };
 		355281BD29EEF6F000F86400 /* libopencv_ccalib.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_ccalib.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_ccalib.4.7.0.dylib; sourceTree = "<group>"; };
 		355281BE29EEF6F000F86400 /* libopencv_reg.4.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_reg.4.7.0.dylib; path = ../../../../usr/local/Cellar/opencv/4.7.0_3/lib/libopencv_reg.4.7.0.dylib; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 				3552825A29F277E500F86400 /* libopencv_wechat_qrcode.4.7.0.dylib in Frameworks */,
 				3552825B29F277E500F86400 /* libopencv_xfeatures2d.4.7.0.dylib in Frameworks */,
 				3552825C29F277E500F86400 /* libopencv_ximgproc.4.7.0.dylib in Frameworks */,
-				3552825D29F277E500F86400 /* libopencv_xobjdetect.4.7.0.dylib in Frameworks */,
 				3552825E29F277E500F86400 /* libopencv_xphoto.4.7.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +368,6 @@
 				355281E229EEF6F100F86400 /* libopencv_wechat_qrcode.4.7.0.dylib */,
 				355281BA29EEF6F000F86400 /* libopencv_xfeatures2d.4.7.0.dylib */,
 				355281CE29EEF6F000F86400 /* libopencv_ximgproc.4.7.0.dylib */,
-				355281BB29EEF6F000F86400 /* libopencv_xobjdetect.4.7.0.dylib */,
 				355281C029EEF6F000F86400 /* libopencv_xphoto.4.7.0.dylib */,
 				5F4558BF24E51ED8005A28AF /* OpenCL.framework */,
 				5F4558BD24E51ED1005A28AF /* CoreVideo.framework */,
