@@ -7,5 +7,6 @@
 これは画像処理をビジュアルプログラミングに対応させたものである
 
 Swiftを使って作成したためMacOS上で動作する
+OpenCVの関数をc++でラッパーしてSwiftで呼び出せるようにしている
 
 https://user-images.githubusercontent.com/107239912/234083432-1f7dd425-5f2d-416f-a5b9-8efcdfb811e6.mov
